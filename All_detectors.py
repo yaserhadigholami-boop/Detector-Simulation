@@ -144,8 +144,12 @@ elif mode == "Proportional":
             if np.random.rand() < 0.3:
                 spectrum.append(np.random.normal(909, 30))
 
-    ax1.hist(spectrum, bins=200)
-    ax1.set_title("Energy Spectrum")
+ax1.hist(spectrum, bins=300, range=(0, 2500))
+ax1.set_xlim(0, 2500)
+ax1.set_title("Energy Spectrum")
+ax1.set_xlabel("Energy (keV)")
+ax1.set_ylabel("Counts")
+ax1.grid(alpha=0.3)
 
 # ---------------- GM ----------------
 elif mode == "GM":
